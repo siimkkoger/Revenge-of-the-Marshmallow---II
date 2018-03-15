@@ -1,17 +1,50 @@
 package Gameplay;
-import java.applet.Applet;
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.lang.reflect.Array;
 import java.security.Key;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Main extends Applet implements KeyListener{
+
+public class Main extends JPanel implements KeyListener{
+
+    /**
+     * Perhaps I should add an extra classes: GamePanel and/maybe Listener?
+     * Rendering would then come from GamePanel, listening from Listener and
+     * Game would give all the objects and game logic itself
+     * Main class would then bring them all together.
+     */
 
 
-    // ------------------- TUTORIAL GRAPHICS -------------------
+    // ---------------------  TUTORIAL GRAPHICS  ---------------------------------
+
+    private static int DEFAULT_WIDTH = 800;
+    private static int DEFAULT_HEIGHT = 600;
+    private final Timer timer;
+    private int timerDelay;
+
+    public Main(){
+        super();
+        this.setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
+        this.setVisible(true);
+        this.setBackground(Color.BLACK);
+        timerDelay = 1000;
+        timer = new Timer(timerDelay, gameTimer);
+        timer.start();
+    }
+
+    ActionListener gameTimer = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("test");
+        }
+    };
 
     private Rectangle rect;
     public void init(){
@@ -20,11 +53,18 @@ public class Main extends Applet implements KeyListener{
     }
     private ArrayList<Integer> keysDown = new ArrayList<>();
 
-    // ---------------------------------------------------------
+    public void paintComponent(Graphics g){
+        super.paint(g);
+
+        setSize(500, 500);
+        Graphics2D g2 = (Graphics2D)g;
+        g2.fill(rect);
+    }
+
+    // -----------------------  START A GAME   ----------------------------------
 
     //TODO : make validation logic
     private static final boolean EVERTHING_IS_OK = true;
-
     private static boolean started = false;
     private static HashMap<String, Game> games = new HashMap<>();
 
@@ -37,11 +77,9 @@ public class Main extends Applet implements KeyListener{
 //        game1.gameLoop();
 //    }
 
-    public void paint(Graphics g){
-        setSize(500, 500);
-        Graphics2D g2 = (Graphics2D)g;
-        g2.fill(rect);
-    }
+
+
+    // ------------------- TUTORIAL KEYPRESS -------------------
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -61,7 +99,7 @@ public class Main extends Applet implements KeyListener{
         keysDown.remove(e.getKeyCode());
     }
 
-    public void moveRect(){
+    private void moveRect(){
         int speed = 10;
         int x = rect.x;
         int y = rect.y;
@@ -74,6 +112,8 @@ public class Main extends Applet implements KeyListener{
         rect.setLocation(x, y);
         repaint();
     }
+
+    // -------------------------------- INTERFACES ----------------------------------
 
     interface validationHelper {
         boolean helpValidation();
