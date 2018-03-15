@@ -1,15 +1,15 @@
-package Engine;
+package Components;
 
 import java.util.ArrayList;
 
 
 public abstract class Entity implements IEntity {
 
-    // TODO : when graphics => {private Body body;}
+    private Body body;
     private Physics physics;
     private Health health;
     private Weapon weapon;
-    // TODO : when graphics => {private View view;}
+    private View view;
     private ArrayList<Entity> targets;
     private ArrayList<Entity> group;
 
@@ -36,6 +36,17 @@ public abstract class Entity implements IEntity {
     }
 
     @Override
+    public Body getBody() {
+        return this.body;
+    }
+
+    @Override
+    public Body setBody(Body body) {
+        this.body = body;
+        return this.body;
+    }
+
+    @Override
     public Physics getPhysics() {
         return this.physics;
     }
@@ -43,7 +54,7 @@ public abstract class Entity implements IEntity {
     @Override
     public Physics setPhysics(Physics physics) {
         this.physics = physics;
-        return physics;
+        return this.physics;
     }
 
     @Override
@@ -54,7 +65,7 @@ public abstract class Entity implements IEntity {
     @Override
     public Health setHealth(Health health) {
         this.health = health;
-        return health;
+        return this.health;
     }
 
     @Override
@@ -65,7 +76,18 @@ public abstract class Entity implements IEntity {
     @Override
     public Weapon setWeapon(Weapon weapon) {
         this.weapon = weapon;
-        return weapon;
+        return this.weapon;
+    }
+
+    @Override
+    public View getView() {
+        return this.view;
+    }
+
+    @Override
+    public View setView(View view) {
+        this.view = view;
+        return this.view;
     }
 
     @Override

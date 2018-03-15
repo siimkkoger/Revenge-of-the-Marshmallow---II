@@ -5,7 +5,6 @@ import java.awt.*;
 
 class Game{
 
-
     /*
      _ Save Game System:
      _ 1. Connect with MongoDB
@@ -53,7 +52,7 @@ class Game{
     private void saveGame() {
         // TODO : save game functionality after database integration.
     }
-    boolean gameValidated(Main.validationHelper validator){
+    boolean gameValidated(GamePanel.validationHelper validator){
         return validator.helpValidation();
     }
     void gameInitialize(){

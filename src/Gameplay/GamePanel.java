@@ -1,19 +1,16 @@
 package Gameplay;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.lang.reflect.Array;
-import java.security.Key;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-public class Main extends JPanel implements KeyListener{
-
+@SuppressWarnings("serial")
+public class GamePanel extends JPanel implements KeyListener{
     /**
      * Perhaps I should add an extra classes: GamePanel and/maybe Listener?
      * Rendering would then come from GamePanel, listening from Listener and
@@ -29,57 +26,64 @@ public class Main extends JPanel implements KeyListener{
     private final Timer timer;
     private int timerDelay;
 
-    public Main(){
+    public GamePanel(){
         super();
         this.setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
         this.setVisible(true);
         this.setBackground(Color.BLACK);
         timerDelay = 1000;
-        timer = new Timer(timerDelay, gameTimer);
+        timer = new Timer(timerDelay, timerListerner);
         timer.start();
+        this.addKeyListener(this);
     }
 
-    ActionListener gameTimer = new ActionListener() {
+    ActionListener timerListerner = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("test");
+            redraw();
         }
     };
 
-    private Rectangle rect;
-    public void init(){
-        this.addKeyListener(this);
-        rect = new Rectangle(0, 0, 50, 50);
+    public void redraw(){
+        this.repaint();
+        System.out.println("The screen has been redrawn!");
     }
-    private ArrayList<Integer> keysDown = new ArrayList<>();
+
+    Rectangle rect = new Rectangle(0, 0, 50, 50);
 
     public void paintComponent(Graphics g){
-        super.paint(g);
-
-        setSize(500, 500);
-        Graphics2D g2 = (Graphics2D)g;
-        g2.fill(rect);
+        super.paintComponent(g);
+        g.drawString("powkerpokwepork", 30, 30);
+//        Graphics2D g2d = (Graphics2D) g;
+//
+//        g2d.setColor(new Color(212, 212, 212));
+//        g2d.drawRect(100, 15, 90, 60);
+//
+//        g2d.setColor(new Color(31, 21, 1));
+//        g2d.fillRect(250, 195, 90, 60);
+//        g2d.fill(rect);
     }
 
     // -----------------------  START A GAME   ----------------------------------
 
-    //TODO : make validation logic
+    //TODO : make validation logic --- goes into MAIN class
+
     private static final boolean EVERTHING_IS_OK = true;
     private static boolean started = false;
     private static HashMap<String, Game> games = new HashMap<>();
 
 //    public static void main(String[] args) {
 //        Game game1 = new Game("Game_1");
-//        if(!game1.gameValidated(() -> Main.EVERTHING_IS_OK)){
+//        if(!game1.gameValidated(() -> GamePanel.EVERTHING_IS_OK)){
 //            throw new RuntimeException("Game was not validated");
 //        }
 //        game1.gameInitialize();
 //        game1.gameLoop();
 //    }
 
-
-
     // ------------------- TUTORIAL KEYPRESS -------------------
+
+    private ArrayList<Integer> keysDown = new ArrayList<>();
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -118,4 +122,5 @@ public class Main extends JPanel implements KeyListener{
     interface validationHelper {
         boolean helpValidation();
     }
+
 }

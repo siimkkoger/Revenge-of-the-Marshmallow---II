@@ -1,4 +1,4 @@
-package Engine;
+package Components;
 
 import java.util.ArrayList;
 
@@ -13,16 +13,16 @@ public interface IEntity {
     public void render();
 
     // Components
-    //public Engine.Body getBody();
-    //public Engine.Body setBody(Engine.Body body);
+    public Components.Body getBody();
+    public Components.Body setBody(Components.Body body);
     public Physics getPhysics();
     public Physics setPhysics(Physics physics);
     public Health getHealth();
     public Health setHealth(Health health);
     public Weapon getWeapon();
     public Weapon setWeapon(Weapon weapon);
-    //public Engine.View getView();
-    //public Engine.View setView(Engine.View view);
+    public Components.View getView();
+    public Components.View setView(Components.View view);
 
     // Signals
     public void entityCreated();
