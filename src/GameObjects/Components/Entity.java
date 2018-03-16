@@ -1,19 +1,16 @@
-package Components;
+package GameObjects.Components;
 
-import java.util.ArrayList;
+import GameObjects.IntelligentObjects.IEntity;
 
 
 public abstract class Entity implements IEntity {
 
     private Body body;
     private Physics physics;
-    private Health health;
-    private Weapon weapon;
     private View view;
-    private ArrayList<Entity> targets;
-    private ArrayList<Entity> group;
 
 
+    // ----------------------------------------- GRAPHIC METHODS ----------------------------------------
     @Override
     public void destroy() {
         /*
@@ -35,6 +32,7 @@ public abstract class Entity implements IEntity {
          */
     }
 
+    // ------------------------------------------ Interface IEntity getters and setters ----------------------------
     @Override
     public Body getBody() {
         return this.body;
@@ -55,28 +53,6 @@ public abstract class Entity implements IEntity {
     public Physics setPhysics(Physics physics) {
         this.physics = physics;
         return this.physics;
-    }
-
-    @Override
-    public Health getHealth() {
-        return this.health;
-    }
-
-    @Override
-    public Health setHealth(Health health) {
-        this.health = health;
-        return this.health;
-    }
-
-    @Override
-    public Weapon getWeapon() {
-        return this.weapon;
-    }
-
-    @Override
-    public Weapon setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-        return this.weapon;
     }
 
     @Override
@@ -101,28 +77,15 @@ public abstract class Entity implements IEntity {
         return this;
     }
 
-    @Override
-    public ArrayList<Entity> getTargets() {
-        return this.targets;
-    }
+
+    // ------------------------------------------------ toString and helpers --------------------------------------------
 
     @Override
-    public void setTargets(ArrayList<Entity> targets) {
-        this.targets = targets;
-    }
-
-    @Override
-    public void addTarget(Entity target) {
-        this.targets.add(target);
-    }
-
-    @Override
-    public ArrayList<Entity> getGroup() {
-        return this.group;
-    }
-
-    @Override
-    public void setGroup(ArrayList<Entity> group) {
-        this.group = group;
+    public String toString() {
+        return "Entity{" +
+                "body=" + body +
+                ", physics=" + physics +
+                ", view=" + view +
+                '}';
     }
 }

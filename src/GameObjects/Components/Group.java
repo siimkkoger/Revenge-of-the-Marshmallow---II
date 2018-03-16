@@ -1,6 +1,4 @@
-package Components;
-
-import java.util.ArrayList;
+package GameObjects.Components;
 
 public class Group<Entity> {
 

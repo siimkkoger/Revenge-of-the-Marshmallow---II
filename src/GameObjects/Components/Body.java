@@ -1,4 +1,4 @@
-package Components;
+package GameObjects.Components;
 
 public class Body {
 

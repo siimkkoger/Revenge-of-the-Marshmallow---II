@@ -1,37 +1,37 @@
-package Components;
+package GameObjects.Components;
+
+import GameObjects.IntelligentObjects.LivingBeing;
 
 public class Health{
 
-    private final int DEFAULT_HP;
-
     private int HP = 0;
     private boolean isAlive = true;
-    private Entity entity = null;
+    private LivingBeing owner;
+    private int regainRate = 1;
 
-    public Health(Entity entity, int HP){
-        this.entity = entity;
-        this.DEFAULT_HP = HP;
-        this.HP = HP;
+    public Health(LivingBeing owner){
+        this.owner = owner;
+        this.HP = owner.getDefaultHP();
     }
 
     public void hit(int damage){
         this.HP -= damage;
-        System.out.println(this.entity.toString() + ": took " + damage + " damage.");
+        System.out.println(this.owner.toString() + ": took " + damage + " damage.");
         if(HP <= 0){
             die();
         }
     }
 
-    public Entity die(){
+    public LivingBeing die(){
         this.HP = 0;
         this.isAlive = false;
-        return this.entity;
+        return this.owner;
     }
 
-    public Entity resurrect(){
-        this.HP = this.DEFAULT_HP;
+    public LivingBeing resurrect(){
+        this.HP = this.owner.getDefaultHP();
         this.isAlive = true;
-        return this.entity;
+        return this.owner;
     }
 
 
@@ -53,12 +53,12 @@ public class Health{
         isAlive = alive;
     }
 
-    public Entity getEntity() {
-        return entity;
+    public LivingBeing getOwner() {
+        return owner;
     }
 
-    public void setEntity(Entity entity) {
-        this.entity = entity;
+    public void setOwner(LivingBeing owner) {
+        this.owner = owner;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Health{
         return "Health{" +
                 "HP=" + HP +
                 ", isAlive=" + isAlive +
-                ", entity=" + entity.toString() +
+                ", owner=" + owner.toString() +
                 '}';
     }
 }
