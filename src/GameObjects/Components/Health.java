@@ -16,7 +16,7 @@ public class Health{
 
     public void hit(int damage){
         this.HP -= damage;
-        System.out.println(this.owner.toString() + ": took " + damage + " damage.");
+        System.out.println(this.owner.toString() + " : <took " + damage + " damage.>");
         if(HP <= 0){
             die();
         }
@@ -25,12 +25,14 @@ public class Health{
     public LivingBeing die(){
         this.HP = 0;
         this.isAlive = false;
+        System.out.println(this.owner.toString() + " : <died.>");
         return this.owner;
     }
 
     public LivingBeing resurrect(){
         this.HP = this.owner.getDefaultHP();
         this.isAlive = true;
+        System.out.println(this.owner.toString() + " : <resurrected.>");
         return this.owner;
     }
 

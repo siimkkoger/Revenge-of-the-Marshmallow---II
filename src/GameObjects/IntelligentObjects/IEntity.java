@@ -1,6 +1,5 @@
 package GameObjects.IntelligentObjects;
 
-import GameObjects.Components.Entity;
 import GameObjects.Components.Physics;
 
 public interface IEntity {

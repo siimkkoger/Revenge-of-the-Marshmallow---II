@@ -5,28 +5,13 @@ import GameObjects.Components.Magic;
 
 public class Marshmallow extends LivingBeing {
 
-    private void setBasics(){
-        this.setName(LivingConstant.MARSHMALLOW.getName());
-        this.setHealth(new Health(this));
-        this.setMagic(new Magic(this));
-        this.setAttack(getDefaultAttack());
-        this.setDefense(getDefaultDefense());
-        /*
-        TODO : 1) setBody
-        TODO : 2) setPhysics
-        TODO : 3) setView
-         */
-
-    }
-
     public Marshmallow(){
-        this.setBasics();
+        super();
 
     }
 
     public Marshmallow(String name){
-        this.setName(name);
-        this.setBasics();
+        super(name);
     }
 
     @Override
@@ -47,5 +32,10 @@ public class Marshmallow extends LivingBeing {
     @Override
     public int getDefaultDefense() {
         return LivingConstant.MARSHMALLOW.getDefense();
+    }
+
+    @Override
+    public String getDefaultName() {
+        return LivingConstant.MARSHMALLOW.getName();
     }
 }

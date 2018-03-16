@@ -1,5 +1,7 @@
 package GameObjects.Components;
 
+import GameObjects.IntelligentObjects.Entity;
+
 public class Body {
 
     private Entity entity = null;

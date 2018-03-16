@@ -5,28 +5,13 @@ import GameObjects.Components.Magic;
 
 public class Troll extends LivingBeing{
 
-    private void setBasics(){
-        this.setName(LivingConstant.TROLL.getName());
-        this.setHealth(new Health(this));
-        this.setMagic(new Magic(this));
-        this.setAttack(getDefaultAttack());
-        this.setDefense(getDefaultDefense());
-        /*
-        TODO : 1) setBody
-        TODO : 2) setPhysics
-        TODO : 3) setView
-         */
-
-    }
-
     public Troll(){
-        this.setBasics();
+        super();
 
     }
 
     public Troll(String name){
-        this.setName(name);
-        this.setBasics();
+        super(name);
     }
 
     @Override
@@ -47,5 +32,10 @@ public class Troll extends LivingBeing{
     @Override
     public int getDefaultDefense() {
         return LivingConstant.TROLL.getDefense();
+    }
+
+    @Override
+    public String getDefaultName() {
+        return LivingConstant.TROLL.getName();
     }
 }

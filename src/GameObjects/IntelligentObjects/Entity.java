@@ -1,6 +1,8 @@
-package GameObjects.Components;
+package GameObjects.IntelligentObjects;
 
-import GameObjects.IntelligentObjects.IEntity;
+import GameObjects.Components.Body;
+import GameObjects.Components.Physics;
+import GameObjects.Components.View;
 
 
 public abstract class Entity implements IEntity {
@@ -79,6 +81,7 @@ public abstract class Entity implements IEntity {
 
 
     // ------------------------------------------------ toString and helpers --------------------------------------------
+
 
     @Override
     public String toString() {

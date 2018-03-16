@@ -1,10 +1,11 @@
-package GameObjects.Components;
+package GameObjects.Components.Skills;
 
+import GameObjects.IntelligentObjects.Entity;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 import java.util.ArrayList;
 
-public abstract class Skill {
+public class Skill {
 
     /*
     Skills are divided to One-time-use and Burning
