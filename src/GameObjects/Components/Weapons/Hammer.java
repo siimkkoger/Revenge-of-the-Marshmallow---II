@@ -23,7 +23,7 @@ public class Hammer extends Weapon{
     }
 
     @Override
-    public String getDefautlName() {
+    public String getDefaultName() {
         return WeaponConstant.HAMMER.getName();
     }
 }

@@ -23,7 +23,7 @@ public class Spear extends Weapon {
     }
 
     @Override
-    public String getDefautlName() {
+    public String getDefaultName() {
         return WeaponConstant.SPEAR.getName();
     }
 

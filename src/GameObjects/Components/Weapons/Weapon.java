@@ -9,7 +9,7 @@ public abstract class Weapon implements Lootable, Equipable{
 
     public abstract int getDefaultDamage();
     public abstract int getDefaultFrequency();
-    public abstract String getDefautlName();
+    public abstract String getDefaultName();
 
     private LivingBeing owner;
     private int damage;
@@ -21,14 +21,14 @@ public abstract class Weapon implements Lootable, Equipable{
         this.owner = owner;
         this.setDamage(getDefaultDamage());
         this.setFrequency(getDefaultFrequency());
-        this.setName(getDefautlName());
+        this.setName(getDefaultName());
     }
 
     public Weapon(){
         this.owner = null;
         this.setDamage(getDefaultDamage());
         this.setFrequency(getDefaultFrequency());
-        this.setName(getDefautlName());
+        this.setName(getDefaultName());
     }
 
     @Override

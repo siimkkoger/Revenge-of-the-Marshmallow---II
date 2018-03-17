@@ -26,7 +26,7 @@ public class WeaponTest {
         }
 
         @Override
-        public String getDefautlName() {
+        public String getDefaultName() {
             return "A Test Weapon";
         }
     };
@@ -42,7 +42,7 @@ public class WeaponTest {
         }
 
         @Override
-        public String getDefautlName() {
+        public String getDefaultName() {
             return "A Test Weapon";
         }
     };
@@ -58,7 +58,7 @@ public class WeaponTest {
         }
 
         @Override
-        public String getDefautlName() {
+        public String getDefaultName() {
             return "A Test Weapon";
         }
     };

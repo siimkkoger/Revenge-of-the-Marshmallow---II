@@ -23,7 +23,7 @@ public class Sword extends Weapon {
     }
 
     @Override
-    public String getDefautlName() {
+    public String getDefaultName() {
         return WeaponConstant.SWORD.getName();
     }
 }

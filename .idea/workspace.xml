@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8030314d-0809-4b35-96a2-7c67f6c901c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/AttackTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/HumanTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/WeaponTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Armor/Armor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Clothes/Cloth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Equipable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Lootable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Perks/Perk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Hammer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Spear.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Sword.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/Body.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/Entity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/Health.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/IEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/Physics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/View.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/marshmallow_2/Components/Weapon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Weapon.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Entity.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Entity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Skill.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Skills/Skill.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/marshmallow_2.iml" afterPath="$PROJECT_DIR$/marshmallow_2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Body.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Body.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Health.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Health.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Human.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Human.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/IEntity.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/IEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/LivingBeing.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/LivingBeing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Marshmallow.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Marshmallow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Troll.java" afterPath="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/Troll.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/WeaponTest.java" afterPath="$PROJECT_DIR$/Tests/WeaponTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Hammer.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Hammer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Spear.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Spear.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Sword.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Sword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java" afterPath="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +21,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.63069546">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="LivingBeing.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="LivingBeing.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/GameObjects/IntelligentObjects/LivingBeing.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="77" column="70" lean-forward="false" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+                <state relative-caret-position="291">
+                  <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1442#1443#0" expanded="true" />
@@ -91,13 +66,26 @@
           <file leaf-file-name="Weapon.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="107" column="45" lean-forward="false" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+                <state relative-caret-position="340">
+                  <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1718#1719#0" expanded="true" />
                     <element signature="e#1755#1756#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="51">
+                    <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -213,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Engine/GameThread.java" />
         <option value="$PROJECT_DIR$/src/Engine/Renderer.java" />
         <option value="$PROJECT_DIR$/src/Components/Body.java" />
         <option value="$PROJECT_DIR$/src/Components/Group.java" />
@@ -260,10 +247,11 @@
         <option value="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Hammer.java" />
         <option value="$PROJECT_DIR$/src/GameObjects/Components/Equipable.java" />
         <option value="$PROJECT_DIR$/src/GameObjects/Components/Armor/Armor.java" />
-        <option value="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java" />
         <option value="$PROJECT_DIR$/Tests/AttackTest.java" />
         <option value="$PROJECT_DIR$/Tests/WeaponTest.java" />
         <option value="$PROJECT_DIR$/src/GameObjects/IntelligentObjects/LivingBeing.java" />
+        <option value="$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -616,7 +604,7 @@
       <workItem from="1521077393040" duration="48000" />
       <workItem from="1521077592361" duration="3165000" />
       <workItem from="1521098852834" duration="32768000" />
-      <workItem from="1521216141615" duration="22908000" />
+      <workItem from="1521216141615" duration="26688000" />
     </task>
     <servers />
   </component>
@@ -653,7 +641,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72879000" />
+    <option name="totallyTimeSpent" value="76659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -701,7 +689,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Gameplay/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Gameplay/keyboardListener.java" />
     <entry file="jar://C:/Program Files/Java/jdk/src.zip!/java/applet/Applet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1118,18 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="107" column="45" lean-forward="false" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1755#1756#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/AttackTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1140,10 +1115,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/WeaponTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#531:837" expanded="false" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="class#869:1176" expanded="false" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="class#1210:1519" expanded="false" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameObjects/IntelligentObjects/LivingBeing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="77" column="70" lean-forward="false" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+        <state relative-caret-position="291">
+          <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1442#1443#0" expanded="true" />
@@ -1180,34 +1186,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/WeaponTest.java">
+    <entry file="file://$PROJECT_DIR$/src/GameObjects/Components/Weapons/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="340">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#531:837" expanded="false" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="class#869:1176" expanded="false" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="class#1210:1519" expanded="false" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1755#1756#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
