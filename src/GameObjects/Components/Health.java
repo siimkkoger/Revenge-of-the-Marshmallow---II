@@ -6,17 +6,17 @@ public class Health{
 
     private int HP = 0;
     private boolean isAlive = true;
-    private LivingBeing owner;
+    private LivingBeing entity;
     private int regainRate = 1;
 
-    public Health(LivingBeing owner){
-        this.owner = owner;
-        this.HP = owner.getDefaultHP();
+    public Health(LivingBeing entity){
+        this.entity = entity;
+        this.HP = entity.getDefaultHP();
     }
 
     public void hit(int damage){
         this.HP -= damage;
-        System.out.println(this.owner.toString() + " : <took " + damage + " damage.>");
+        System.out.println(this.entity.toString() + " : <took " + damage + " damage.>");
         if(HP <= 0){
             die();
         }
@@ -25,15 +25,15 @@ public class Health{
     public LivingBeing die(){
         this.HP = 0;
         this.isAlive = false;
-        System.out.println(this.owner.toString() + " : <died.>");
-        return this.owner;
+        System.out.println(this.entity.toString() + " : <died.>");
+        return this.entity;
     }
 
     public LivingBeing resurrect(){
-        this.HP = this.owner.getDefaultHP();
+        this.HP = this.entity.getDefaultHP();
         this.isAlive = true;
-        System.out.println(this.owner.toString() + " : <resurrected.>");
-        return this.owner;
+        System.out.println(this.entity.toString() + " : <resurrected.>");
+        return this.entity;
     }
 
 
@@ -55,12 +55,12 @@ public class Health{
         isAlive = alive;
     }
 
-    public LivingBeing getOwner() {
-        return owner;
+    public LivingBeing getEntity() {
+        return entity;
     }
 
-    public void setOwner(LivingBeing owner) {
-        this.owner = owner;
+    public void setEntity(LivingBeing entity) {
+        this.entity = entity;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Health{
         return "Health{" +
                 "HP=" + HP +
                 ", isAlive=" + isAlive +
-                ", owner=" + owner.toString() +
+                ", entity=" + entity.toString() +
                 '}';
     }
 }

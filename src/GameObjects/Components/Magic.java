@@ -6,11 +6,11 @@ public class Magic {
 
     private int MP = 0;
     private int regainRate = 1; // 1 mana per second - can be affected by spells
-    private LivingBeing owner;
+    private LivingBeing entity;
 
-    public Magic(LivingBeing owner){
-        this.owner = owner;
-        this.MP = owner.getDefaultMP();
+    public Magic(LivingBeing entity){
+        this.entity = entity;
+        this.MP = entity.getDefaultMP();
     }
 
     public int getMP() {
@@ -29,19 +29,19 @@ public class Magic {
         this.regainRate = regainRate;
     }
 
-    public LivingBeing getOwner() {
-        return owner;
+    public LivingBeing getEntity() {
+        return entity;
     }
 
-    public void setOwner(LivingBeing owner) {
-        this.owner = owner;
+    public void setEntity(LivingBeing entity) {
+        this.entity = entity;
     }
 
     @Override
     public String toString() {
         return "Magic{" +
                 "MP=" + MP +
-                ", owner=" + owner +
+                ", entity=" + entity +
                 '}';
     }
 }

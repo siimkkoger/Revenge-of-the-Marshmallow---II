@@ -27,7 +27,7 @@ public class WeaponTest {
 
         @Override
         public String getDefaultName() {
-            return "A Test Weapon";
+            return "A Test Weapon 0";
         }
     };
     Weapon testWeapon10 = new Weapon() {
@@ -43,7 +43,7 @@ public class WeaponTest {
 
         @Override
         public String getDefaultName() {
-            return "A Test Weapon";
+            return "A Test Weapon 10";
         }
     };
     Weapon testWeapon1000 = new Weapon() {
@@ -59,7 +59,7 @@ public class WeaponTest {
 
         @Override
         public String getDefaultName() {
-            return "A Test Weapon";
+            return "A Test Weapon 1000";
         }
     };
 
@@ -75,11 +75,20 @@ public class WeaponTest {
     }
 
     @Test
-    public void EquipAndCompareDamage0() throws Exception {
+    public void EquipButLivindDamageWillNotChange0() throws Exception {
         human.pickUpItem(testWeapon0);
         human.equipWeapon(testWeapon0);
         int humanDamage = human.getAttack();
-        assertEquals(0, humanDamage);
+        assertEquals(10, humanDamage);
+        System.out.println("_________________________________");
+    }
+
+    @Test
+    public void EquipAndSeeWeaponDamage0() throws Exception {
+        human.pickUpItem(testWeapon0);
+        human.equipWeapon(testWeapon0);
+        int humanOutput = human.getCurrentWeapon().getDamage();
+        assertEquals(0, humanOutput);
         System.out.println("_________________________________");
     }
 
@@ -87,8 +96,8 @@ public class WeaponTest {
     public void EquipAndCompareDamage1000() throws Exception {
         human.pickUpItem(testWeapon1000);
         human.equipWeapon(testWeapon1000);
-        int humanDamage = human.getAttack();
-        assertEquals(1000, humanDamage);
+        int humanOutput = human.getCurrentWeapon().getDamage();
+        assertEquals(1000, humanOutput);
         System.out.println("_________________________________");
     }
 

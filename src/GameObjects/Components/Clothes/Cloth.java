@@ -22,4 +22,14 @@ public class Cloth implements Lootable{
          */
         System.out.println("Looking at the item: " + this);
     }
+
+    @Override
+    public LivingBeing getOwner() {
+        return this.owner;
+    }
+
+    @Override
+    public void setOwner(LivingBeing newOwner) {
+        this.owner = newOwner;
+    }
 }

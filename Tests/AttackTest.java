@@ -34,7 +34,7 @@ public class AttackTest {
 
     @Test
     public void DeathTest1() throws Exception {
-        bob.setAttack(100);
+        bob.setAttack(1000000);
         bob.attacks(tina);
         int tinaHealth = tina.getHealth().getHP();
         assertEquals(0, tinaHealth);

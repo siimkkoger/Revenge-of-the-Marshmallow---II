@@ -56,10 +56,7 @@ public abstract class LivingBeing extends Entity{
 
     // ------------------------------------- STATE CHECKERS ------------------
     public boolean isAlive(){
-        if(this.health.isAlive()){
-            return true;
-        }
-        return false;
+        return this.health.isAlive();
         /*
         TODO : somehow remove a view.
          */
@@ -71,20 +68,28 @@ public abstract class LivingBeing extends Entity{
 
     // ------------------------------------ ACTION ---------------------------
     public void attacks(LivingBeing target){
-        int damage = this.attack;
-        /*
-        TODO : damage is calculated based on attack, weapons, precision etc..
-         */
-        System.out.println(this + " : Attacked : => \n" + target + "\n");
+        int damage;
+        if(this.currentWeapon == null){
+            damage = this.attack;
+        }else {
+            damage = this.currentWeapon.getDamage();
+        }
+        System.out.println(this + " : Attacked : => \n" + target + "\n --- ACTION END ---)))!\n");
         target.isHit(damage);
     }
 
-    public void isHit(int damage){
-        int calculatedDamage = damage;
+    private void isHit(int damage){
         /*
-            TODO : calculate damage taken considering defense, spells, perks etc...
+        Half life formula : A = A0 * (1/2)**(t/h)
          */
-        this.health.hit(calculatedDamage);
+        int damageTaken;
+        if(this.currentArmor == null){
+            damageTaken = damage;
+        }else{
+            int armor = this.currentArmor.getDefense();
+            damageTaken = (int) (damage * Math.pow(0.5, (armor/Armor.HALF_LIFE())));
+        }
+        this.health.hit(damageTaken);
     }
 
     public void useSkill(Skill skill){
@@ -95,13 +100,14 @@ public abstract class LivingBeing extends Entity{
 
     public void addItem(Lootable item){
         // TODO : add support for more items!
+        item.setOwner(this);
         if(item instanceof Weapon){
             this.weaponList.add((Weapon) item);
         }
         if(item instanceof Armor){
             this.armorList.add((Armor) item);
         }
-        System.out.println(this + " : Looted(added) : => " + item);
+        System.out.println(this + " : Added : => " + item + "\n --- ACTION END ---)))!\n");
     }
 
     public void removeItem(Lootable item){
@@ -111,7 +117,7 @@ public abstract class LivingBeing extends Entity{
         if(item instanceof Armor){
             this.armorList.remove((Armor) item);
         }
-        System.out.println(this + " : Removed : => " + item);
+        System.out.println(this + " : Removed : => " + item + "\n --- ACTION END ---)))!\n");
     }
 
     public void pickUpItem(Lootable item){
@@ -122,7 +128,7 @@ public abstract class LivingBeing extends Entity{
         if(item instanceof Armor){
             this.armorList.add((Armor) item);
         }
-        System.out.println(this + " : Looted : => \n" + item);
+        System.out.println(this + " : Looted : => \n" + item + "\n --- ACTION END ---)))!\n");
     }
 
     public void equipWeapon(Weapon weapon){
@@ -221,13 +227,11 @@ public abstract class LivingBeing extends Entity{
     @Override
     public String toString() {
         return "LivingBeing{" +
-                "class='" + this.getClass() + '\'' +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", health=" + health.getHP() +
                 ", magic=" + magic.getMP() +
-                ", attack=" + attack +
-                ", defense=" + defense +
                 ", currentWeapon=" + currentWeapon +
+                ", currentArmor=" + currentArmor +
                 '}';
     }
 }

@@ -19,6 +19,7 @@ public abstract class Weapon implements Lootable, Equipable{
 
     public Weapon(LivingBeing owner){
         this.owner = owner;
+        owner.addItem(this);
         this.setDamage(getDefaultDamage());
         this.setFrequency(getDefaultFrequency());
         this.setName(getDefaultName());
@@ -42,7 +43,7 @@ public abstract class Weapon implements Lootable, Equipable{
     @Override
     public void lookInfo() {
         /*
-        TODO : send information about the item on the ground.
+        TODO : send information about the item.
          */
         System.out.println("Looking at the item: " + this);
     }
@@ -50,14 +51,12 @@ public abstract class Weapon implements Lootable, Equipable{
     @Override
     public void equip() {
         this.owner.setCurrentWeapon(this);
-        owner.setAttack(this.damage);
         isEquiped = true;
     }
 
     @Override
     public void unEquip() {
         this.owner.setCurrentWeapon(null);
-        owner.setAttack(owner.getDefaultAttack());
         isEquiped = false;
     }
 
@@ -68,12 +67,16 @@ public abstract class Weapon implements Lootable, Equipable{
 
 
     // ------------------------------------------------ GETTERS and SETTERS --------------------------------------
-    public Entity getOwner() {
-        return owner;
+
+
+    @Override
+    public LivingBeing getOwner() {
+        return this.owner;
     }
 
-    public void setOwner(LivingBeing owner) {
-        this.owner = owner;
+    @Override
+    public void setOwner(LivingBeing newOwner) {
+        this.owner = newOwner;
     }
 
     public int getDamage() {
@@ -102,10 +105,10 @@ public abstract class Weapon implements Lootable, Equipable{
 
     @Override
     public String toString() {
-        return "Weapon{" +
-                "name=" + name +
-                ", damage=" + damage +
-                ", owner='" + owner.getName() + '\'' +
+        return "\nWeapon{" +
+                "\n    name=" + name +
+                ", \n    damage=" + damage +
+                ", \n    owner='" + owner.getName() + '\'' +
                 '}';
     }
 
