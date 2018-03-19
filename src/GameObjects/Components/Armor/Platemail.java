@@ -1,16 +1,9 @@
 package GameObjects.Components.Armor;
 
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public class Platemail extends Armor {
-
-    public Platemail(){
-        super();
-    }
-
-    public Platemail(LivingBeing owner){
-        super(owner);
-    }
 
     @Override
     public int getDefaultDefense() {

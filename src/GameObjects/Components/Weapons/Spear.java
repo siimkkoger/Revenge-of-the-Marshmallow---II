@@ -1,16 +1,9 @@
 package GameObjects.Components.Weapons;
 
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public class Spear extends Weapon {
-
-    public Spear(LivingBeing owner){
-        super(owner);
-    }
-
-    public Spear(){
-
-    }
 
     @Override
     public int getDefaultDamage() {

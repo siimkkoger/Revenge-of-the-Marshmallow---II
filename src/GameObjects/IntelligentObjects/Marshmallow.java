@@ -3,7 +3,7 @@ package GameObjects.IntelligentObjects;
 import GameObjects.Components.Health;
 import GameObjects.Components.Magic;
 
-public class Marshmallow extends LivingBeing {
+public class Marshmallow extends Humanoid {
 
     public Marshmallow(){
         super();

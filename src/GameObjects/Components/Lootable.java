@@ -1,10 +1,11 @@
 package GameObjects.Components;
 
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public interface Lootable {
-    void pickUp(LivingBeing looter);
+    void pickUp(Humanoid looter);
     void lookInfo();
     LivingBeing getOwner();
-    void setOwner(LivingBeing newOwner);
+    void setOwner(Humanoid newOwner);
 }

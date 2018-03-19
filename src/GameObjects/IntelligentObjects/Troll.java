@@ -3,7 +3,7 @@ package GameObjects.IntelligentObjects;
 import GameObjects.Components.Health;
 import GameObjects.Components.Magic;
 
-public class Troll extends LivingBeing{
+public class Troll extends Humanoid{
 
     public Troll(){
         super();

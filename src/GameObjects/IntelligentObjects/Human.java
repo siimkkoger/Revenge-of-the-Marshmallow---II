@@ -2,7 +2,7 @@ package GameObjects.IntelligentObjects;
 
 import GameObjects.Components.*;
 
-public class Human extends LivingBeing {
+public class Human extends Humanoid {
 
     public Human(){
         super();

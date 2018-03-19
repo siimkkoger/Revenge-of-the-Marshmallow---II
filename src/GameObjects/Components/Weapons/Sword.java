@@ -1,10 +1,10 @@
 package GameObjects.Components.Weapons;
 
-import GameObjects.IntelligentObjects.LivingBeing;
+import GameObjects.IntelligentObjects.Humanoid;
 
 public class Sword extends Weapon {
 
-    public Sword(LivingBeing owner){
+    public Sword(Humanoid owner){
         super(owner);
     }
 

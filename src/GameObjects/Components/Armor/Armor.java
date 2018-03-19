@@ -2,6 +2,7 @@ package GameObjects.Components.Armor;
 
 import GameObjects.Components.Equipable;
 import GameObjects.Components.Lootable;
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public abstract class Armor implements Lootable, Equipable{
@@ -30,26 +31,29 @@ public abstract class Armor implements Lootable, Equipable{
     public abstract int getDefaultDefense();
     public abstract String getDefaultName();
 
-    private LivingBeing owner;
+    private Humanoid owner;
     private boolean isEquiped;
     private int defense;
     private String name;
 
-    public Armor(LivingBeing owner){
-        this.owner = owner;
-        owner.addItem(this);
+    private void setUp(){
         this.setDefense(getDefaultDefense());
         this.setName(getDefaultName());
+    }
+
+    public Armor(Humanoid owner){
+        this.owner = owner;
+        owner.addItem(this);
+        setUp();
     }
 
     public Armor(){
         this.owner = null;
-        this.setDefense(getDefaultDefense());
-        this.setName(getDefaultName());
+        setUp();
     }
 
     @Override
-    public void pickUp(LivingBeing looter) {
+    public void pickUp(Humanoid looter) {
         /*
         TODO : somehow render it away when it's picked up. (When owner != null ?)
          */
@@ -65,12 +69,12 @@ public abstract class Armor implements Lootable, Equipable{
     }
 
     @Override
-    public LivingBeing getOwner() {
+    public Humanoid getOwner() {
         return this.owner;
     }
 
     @Override
-    public void setOwner(LivingBeing newOwner) {
+    public void setOwner(Humanoid newOwner) {
         this.owner = newOwner;
     }
 

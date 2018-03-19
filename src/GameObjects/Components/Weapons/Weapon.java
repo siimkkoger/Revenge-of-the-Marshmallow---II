@@ -3,6 +3,7 @@ package GameObjects.Components.Weapons;
 import GameObjects.Components.Equipable;
 import GameObjects.Components.Lootable;
 import GameObjects.IntelligentObjects.Entity;
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public abstract class Weapon implements Lootable, Equipable{
@@ -11,29 +12,31 @@ public abstract class Weapon implements Lootable, Equipable{
     public abstract int getDefaultFrequency();
     public abstract String getDefaultName();
 
-    private LivingBeing owner;
+    private Humanoid owner;
     private int damage;
     private int frequency;
     private String name;
     private boolean isEquiped;
 
-    public Weapon(LivingBeing owner){
-        this.owner = owner;
-        owner.addItem(this);
+    private void setUp(){
         this.setDamage(getDefaultDamage());
         this.setFrequency(getDefaultFrequency());
         this.setName(getDefaultName());
+    }
+
+    public Weapon(Humanoid owner){
+        this.owner = owner;
+        owner.addItem(this);
+        setUp();
     }
 
     public Weapon(){
         this.owner = null;
-        this.setDamage(getDefaultDamage());
-        this.setFrequency(getDefaultFrequency());
-        this.setName(getDefaultName());
+        setUp();
     }
 
     @Override
-    public void pickUp(LivingBeing looter) {
+    public void pickUp(Humanoid looter) {
         /*
         TODO : somehow render it away when it's picked up. (When owner != null ?)
          */
@@ -75,7 +78,7 @@ public abstract class Weapon implements Lootable, Equipable{
     }
 
     @Override
-    public void setOwner(LivingBeing newOwner) {
+    public void setOwner(Humanoid newOwner) {
         this.owner = newOwner;
     }
 

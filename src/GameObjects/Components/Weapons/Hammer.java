@@ -1,16 +1,9 @@
 package GameObjects.Components.Weapons;
 
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public class Hammer extends Weapon{
-
-    public Hammer(LivingBeing owner){
-        super(owner);
-    }
-
-    public Hammer(){
-
-    }
 
     @Override
     public int getDefaultDamage() {

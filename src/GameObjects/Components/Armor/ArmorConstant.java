@@ -1,6 +1,7 @@
 package GameObjects.Components.Armor;
 
 public enum ArmorConstant {
+
     CHAINMAIL(50, "chainmail"),
     PLATEMAIL(60, "platemail");
 

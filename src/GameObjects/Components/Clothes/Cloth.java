@@ -1,14 +1,15 @@
 package GameObjects.Components.Clothes;
 
 import GameObjects.Components.Lootable;
+import GameObjects.IntelligentObjects.Humanoid;
 import GameObjects.IntelligentObjects.LivingBeing;
 
 public class Cloth implements Lootable{
 
-    private LivingBeing owner;
+    private Humanoid owner;
 
     @Override
-    public void pickUp(LivingBeing looter) {
+    public void pickUp(Humanoid looter) {
         /*
         TODO : somehow render it away when it's picked up. (When owner != null ?)
          */
@@ -24,12 +25,12 @@ public class Cloth implements Lootable{
     }
 
     @Override
-    public LivingBeing getOwner() {
+    public Humanoid getOwner() {
         return this.owner;
     }
 
     @Override
-    public void setOwner(LivingBeing newOwner) {
+    public void setOwner(Humanoid newOwner) {
         this.owner = newOwner;
     }
 }
