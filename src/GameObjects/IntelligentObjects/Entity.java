@@ -1,15 +1,31 @@
 package GameObjects.IntelligentObjects;
 
-import GameObjects.Components.Body;
-import GameObjects.Components.Physics;
-import GameObjects.Components.View;
+import GameObjects.Components.*;
+import GameObjects.Components.Armor.Armor;
+import GameObjects.Components.Clothes.Cloth;
+import GameObjects.Components.Skills.Skill;
+import GameObjects.Components.Spells.Spell;
+import GameObjects.Components.Spells.SpellList;
+import GameObjects.Components.Weapons.Weapon;
 
 
-public abstract class Entity implements IEntity {
+public class Entity implements IEntity {
 
     private Body body;
     private Physics physics;
     private View view;
+
+    private String name;
+    private Health health;
+    private Magic magic;
+
+    private Weapon weapon;
+    private Armor armor;
+    private Cloth cloth;
+
+    private Spell spell;
+    private SpellList spellList;
+    private Skill skill;
 
 
     // ----------------------------------------- GRAPHIC METHODS ----------------------------------------
@@ -35,15 +51,16 @@ public abstract class Entity implements IEntity {
     }
 
     // ------------------------------------------ Interface IEntity getters and setters ----------------------------
+
+    // ----------------- BODY / PHYSICS / VIEW ----------------------
     @Override
     public Body getBody() {
         return this.body;
     }
 
     @Override
-    public Body setBody(Body body) {
+    public void setBody(Body body) {
         this.body = body;
-        return this.body;
     }
 
     @Override
@@ -52,9 +69,8 @@ public abstract class Entity implements IEntity {
     }
 
     @Override
-    public Physics setPhysics(Physics physics) {
+    public void setPhysics(Physics physics) {
         this.physics = physics;
-        return this.physics;
     }
 
     @Override
@@ -63,9 +79,102 @@ public abstract class Entity implements IEntity {
     }
 
     @Override
-    public View setView(View view) {
+    public void setView(View view) {
         this.view = view;
-        return this.view;
+    }
+
+
+    // ---------- OTHERS -----------
+
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public Health getHealth() {
+        return this.health;
+    }
+
+    @Override
+    public void setHealth(Health health) {
+        this.health = health;
+    }
+
+    @Override
+    public Magic getMagic() {
+        return this.magic;
+    }
+
+    @Override
+    public void setMagic(Magic magic) {
+        this.magic = magic;
+    }
+
+    @Override
+    public Weapon getWeapon() {
+        return this.weapon;
+    }
+
+    @Override
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    @Override
+    public Armor getArmor() {
+        return this.armor;
+    }
+
+    @Override
+    public void setArmor(Armor armor) {
+        this.armor = armor;
+    }
+
+    @Override
+    public Cloth getCloth() {
+        return this.cloth;
+    }
+
+    @Override
+    public void setCloth(Cloth cloth) {
+        this.cloth = cloth;
+    }
+
+    @Override
+    public Spell getSpell() {
+        return this.spell;
+    }
+
+    @Override
+    public void setSpell(Spell spell) {
+        this.spell = spell;
+    }
+
+    @Override
+    public SpellList getSpellList() {
+        return this.spellList;
+    }
+
+    @Override
+    public void setSpellList(SpellList spelllist) {
+        this.spellList = spelllist;
+    }
+
+    @Override
+    public Skill getSkill() {
+        return this.skill;
+    }
+
+    @Override
+    public void setSkill(Skill skill) {
+        this.skill = skill;
     }
 
     @Override
@@ -80,9 +189,8 @@ public abstract class Entity implements IEntity {
     }
 
 
+
     // ------------------------------------------------ toString and helpers --------------------------------------------
-
-
     @Override
     public String toString() {
         return "Entity{" +
@@ -91,4 +199,5 @@ public abstract class Entity implements IEntity {
                 ", view=" + view +
                 '}';
     }
+
 }

@@ -15,9 +15,6 @@ public abstract class LivingBeing extends Entity{
     public abstract int getDefaultDefense();
     public abstract String getDefaultName();
 
-    private String name;
-    private Health health;
-    private Magic magic;
     private int attack;
     private int defense;
 
@@ -45,11 +42,11 @@ public abstract class LivingBeing extends Entity{
     }
 
     public boolean isAlive(){
-        return this.health.isAlive();
+        return this.getHealth().isAlive();
     }
 
     public int currentHP(){
-        return health.getHP();
+        return this.getHealth().getHP();
     }
 
     // ------------------------------------ ACTION ---------------------------
@@ -58,31 +55,6 @@ public abstract class LivingBeing extends Entity{
 
 
     // ------------------------------------ GETTERS and SETTERS ---------------------------
-
-
-    public Health getHealth() {
-        return health;
-    }
-
-    public void setHealth(Health health) {
-        this.health = health;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Magic getMagic() {
-        return magic;
-    }
-
-    public void setMagic(Magic magic) {
-        this.magic = magic;
-    }
 
     public int getAttack() {
         return attack;
@@ -105,9 +77,9 @@ public abstract class LivingBeing extends Entity{
     @Override
     public String toString() {
         return "LivingBeing{" +
-                "name='" + name + '\'' +
-                ", health=" + health.getHP() +
-                ", magic=" + magic.getMP() +
+                "name='" + this.getName() + '\'' +
+                ", health=" + this.getHealth().getHP() +
+                ", magic=" + this.getMagic().getMP() +
                 '}';
     }
 }

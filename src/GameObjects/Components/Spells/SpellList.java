@@ -19,6 +19,10 @@ public class SpellList {
     }
 
     public void fillMap(){
+        /*
+        In the beginning just add every spell in here and unlock everything
+        If the game becomes something bigger, then spell system can also be updated.
+         */
         spellMap.put(new Fireball(), false);
         spellMap.put(new Icespike(), false);
         for(Spell spell : spellMap.keySet()){
